@@ -11,6 +11,7 @@ module.exports = {
 
 // 1. Display the names of all of the listeners
 function displayListenerNames (arrObjFile) {
+  // Initialize
   const listenerNames = [] // Create the empty array to push into.
 
   for (const listener of arrObjFile) {
@@ -28,6 +29,7 @@ function displayListenerNameAndGenre (arrObjFile) {
   const listenerGenresNames = {}
 
   listenerNamesArray.map((name, index) => {
+    // Initialize
     const listenerGenresObj = arrObjFile[index].genres
     console.log('Get Genres', listenerGenresObj)
 
