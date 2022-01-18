@@ -21,3 +21,21 @@ function displayListenerNames (arrObjFile) {
 
   return listenerNames
 }
+
+// 2. Display the listeners and their genres
+function displayListenerNameAndGenre (arrObjFile) {
+  const listenerNamesArray = displayListenerNames(arrObjFile)
+  const listenerGenresNames = {}
+
+  listenerNamesArray.map((name, index) => {
+    const listenerGenresObj = arrObjFile[index].genres
+    console.log('Get Genres', listenerGenresObj)
+
+    listenerGenresNames[name] = listenerGenresObj
+    console.log('List Names and their fav Genres: ', listenerGenresNames[name])
+  })
+
+  console.log(listenerGenresNames)
+
+  return listenerGenresNames
+}
