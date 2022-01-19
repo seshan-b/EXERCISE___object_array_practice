@@ -41,3 +41,16 @@ function displayListenerNameAndGenre (arrObjFile) {
 
   return listenerGenresNames
 }
+
+// 3. Display the name of the pop artists
+function displayArtistNames (arrObjFile) {
+  const artistNames = [] // Create the empty array to push into.
+  const artistsByGenre = arrObjFile.filter(element => element.genre === 'pop')
+
+  for (const artist of artistsByGenre) {
+    artistNames.push(artist.name)
+    console.log('Artist Names: ', artistNames)
+  }
+
+  return artistNames
+}
