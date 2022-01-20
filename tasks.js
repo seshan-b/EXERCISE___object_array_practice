@@ -54,3 +54,18 @@ function displayArtistNames (arrObjFile) {
 
   return artistNames
 }
+
+// 4. Display the release IDs of the rap and trap artists
+
+function getId (arrObjFile) {
+  const rapArtist = arrObjFile.filter(element => element.genre === 'rap')
+  const trapArtist = arrObjFile.filter(element => element.genre === 'trap')
+
+  const makeNewArrayArtists = [...rapArtist, ...trapArtist]
+
+  console.log('Log makeNewArrayArtists: ', makeNewArrayArtists)
+
+  const ArtistId = makeNewArrayArtists.map(element => element.id)
+
+  return ArtistId
+}
