@@ -69,3 +69,21 @@ function getId (arrObjFile) {
 
   return ArtistId
 }
+
+// 5. Display the names of the releases by Queen
+function releasesByArtist (artistArrObjFile, releasesArrObjFile, artistName) {
+  const newArrayToLoad = []
+
+  const findArtistName = artistArrObjFile.find(element => element.name === artistName)
+  // console.log('Find Artist Name: ', findArtistName)
+
+  const locateReleaseId = findArtistName.releaseIds
+  // console.log('Release Id: ', locateReleaseId)
+
+  for (let i = 0; i < locateReleaseId.length; i++) {
+    const getReleaseData = releasesArrObjFile.find(element => element.id === locateReleaseId[i])
+    newArrayToLoad.push(getReleaseData)
+  }
+
+  return newArrayToLoad
+}
