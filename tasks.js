@@ -87,3 +87,21 @@ function releasesByArtist (artistArrObjFile, releasesArrObjFile, artistName) {
 
   return newArrayToLoad
 }
+
+// 6. Display the artist names of Debra's genres
+function getGenreByArtist (listenerArrObjFile, artistArrObjFile, listenerName) {
+  const newArrayToLoad = []
+
+  const findAListenerName = listenerArrObjFile.find(element => element.name === listenerName)
+
+  const getGenre = findAListenerName.genres
+
+  console.log('Get genre: ', getGenre)
+
+  for (let i = 0; i < getGenre.length; i++) {
+    const getGenreData = artistArrObjFile.filter(element => element.genre === getGenre[i])
+    console.log('Log getGenre[i]', getGenre[i])
+    newArrayToLoad.push(...getGenreData)
+  }
+  return newArrayToLoad
+}
