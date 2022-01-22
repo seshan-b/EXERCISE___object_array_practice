@@ -105,3 +105,21 @@ function getGenreByArtist (listenerArrObjFile, artistArrObjFile, listenerName) {
   }
   return newArrayToLoad
 }
+
+// 7. Display the release names of Jono's genres
+function getReleaseByArtistGenre (listenerArrObjFile, releaseArrObjFile, listenerName) {
+  const newArrayToLoad = []
+
+  const findAListenerName = listenerArrObjFile.find(element => element.name === listenerName)
+
+  const getGenre = findAListenerName.genres
+
+  for (let i = 0; i < getGenre.length; i++) {
+    const getGenreData = releaseArrObjFile.filter(element => element.genre === getGenre[i])
+    newArrayToLoad.push(...getGenreData)
+  }
+
+  newArrayToLoad.map(element => element.name)
+
+  return newArrayToLoad
+}
