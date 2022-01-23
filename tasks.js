@@ -132,6 +132,7 @@ function getReleaseByArtistGenre (
   const getGenre = findAListenerName.genres
 
   for (let i = 0; i < getGenre.length; i++) {
+    // Initialize
     const getGenreData = releaseArrObjFile.filter(
       (element) => element.genre === getGenre[i]
     )
