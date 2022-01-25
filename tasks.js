@@ -143,3 +143,18 @@ function getReleaseByArtistGenre (
 
   return newArrayToLoad
 }
+
+// 8. Display the artist and release names of all of the listeners
+
+function DisplayReleaseNameOfAllListeners (listenerArrObjFile, releaseArrObjFile) {
+  const newObjToLoad = {}
+
+  const getListener = listenerArrObjFile.map(element => element.name)
+
+  for (let i = 0; i < getListener.length; i++) {
+    const getAllData = getReleaseByArtistGenre(listenerArrObjFile, releaseArrObjFile, getListener[i])
+    // console.log(getListener[i])
+    newObjToLoad[getListener[i]] = getAllData
+  }
+  return newObjToLoad
+}
