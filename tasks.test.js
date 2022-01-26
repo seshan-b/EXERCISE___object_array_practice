@@ -4,14 +4,15 @@ const listeners = require('./data/listeners')
 const releases = require('./data/releases')
 
 // 1. Display the names of all of the listeners
-test('\n 1. Display the names of all of the listeners', function () {
+test('1. Display the names of all of the listeners', function () {
   const expected = ['Debra', 'Jono', 'Stina']
   const actual = tasks.displayListenerNames(listeners)
   expect(actual).toEqual(expected)
+  console.log('\n ')
 })
 
 // 2. Display the listeners and their genres
-test('\n 2. Display the listeners and their genres', () => {
+test('2. Display the listeners and their genres', () => {
   const expected = {
     Debra: ['pop', 'chill'],
     Jono: ['rap', 'trap'],
@@ -22,14 +23,14 @@ test('\n 2. Display the listeners and their genres', () => {
 })
 
 // 3. Display the name of the pop artists
-test('Display the name of the pop artists', () => {
+test('3. Display the name of the pop artists', () => {
   const expected = ['Queen', 'The Beatles']
   const actual = tasks.displayArtistNames(artists)
   expect(actual).toEqual(expected)
 })
 
 // 4. Display the name of the pop artists
-test('Display the release IDs of the rap and trap artists', () => {
+test('4. Display the release IDs of the rap and trap artists', () => {
   const expected = [3, 4]
   const actual = tasks.getId(artists)
   expect(actual).toEqual(expected)
