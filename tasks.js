@@ -58,6 +58,7 @@ function displayArtistNames (arrObjFile) {
 // 4. Display the release IDs of the rap and trap artists
 
 function getId (arrObjFile) {
+  // Initialize
   const rapArtist = arrObjFile.filter((element) => element.genre === 'rap')
   const trapArtist = arrObjFile.filter((element) => element.genre === 'trap')
 
@@ -72,6 +73,7 @@ function getId (arrObjFile) {
 
 // 5. Display the names of the releases by Queen
 function releasesByArtist (artistArrObjFile, releasesArrObjFile, artistName) {
+  // Initialize
   const newArrayToLoad = []
 
   const findArtistName = artistArrObjFile.find(
@@ -83,6 +85,7 @@ function releasesByArtist (artistArrObjFile, releasesArrObjFile, artistName) {
   // console.log('Release Id: ', locateReleaseId)
 
   for (let i = 0; i < locateReleaseId.length; i++) {
+    // Initialize
     const getReleaseData = releasesArrObjFile.find(
       (element) => element.id === locateReleaseId[i]
     )
